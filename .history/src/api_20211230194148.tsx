@@ -12,7 +12,7 @@ export interface WeatherData {
   weather: Weather[];
   coord: { lat: number; lon: number };
 }
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = process.env.API_KEY;
 
 export const getByZip = async (zip: number): Promise<WeatherData> => {
   const url = `https://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid=${API_KEY}`;
